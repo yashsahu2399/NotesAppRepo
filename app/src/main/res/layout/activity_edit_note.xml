@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Title Input Field -->
+    <TextView
+        android:id="@+id/editNoteTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note Title"
+        android:textSize="18sp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/editNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter title"
+        android:textSize="16sp"
+        android:inputType="text"/>
+
+    <!-- Description Input Field -->
+    <TextView
+        android:id="@+id/editNoteDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note Description"
+        android:textSize="18sp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editNoteDescription"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Enter description"
+        android:textSize="16sp"
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:scrollbars="vertical"/>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSaveNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginTop="24dp"
+        android:background="@color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+</LinearLayout>
