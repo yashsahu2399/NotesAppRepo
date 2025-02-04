@@ -46,6 +46,11 @@ class EditNoteActivity : AppCompatActivity() {
             finish()
 
         }
+
+        binding.btnDelete.setOnClickListener {
+
+            deleteNoteInDatabase(note)
+        }
     }
 
     private fun updateNoteInDatabase(updatedNote: Note) {
@@ -54,6 +59,16 @@ class EditNoteActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             notesDao = NoteDatabase.getDatabase(applicationContext).notesDao()
             notesDao.update(updatedNote)
+
+        }
+    }
+
+    private fun deleteNoteInDatabase(updatedNote: Note) {
+        // Assuming you're using Room for the database
+        // This would be done asynchronously (e.g., using a coroutine)
+        CoroutineScope(Dispatchers.IO).launch {
+            notesDao = NoteDatabase.getDatabase(applicationContext).notesDao()
+            notesDao.delete(updatedNote)
 
         }
     }
